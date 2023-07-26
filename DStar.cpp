@@ -123,7 +123,7 @@ void Dstar::InsertNode(State * state, double h_new){
     else if (state->t == _open_)
         state->k = min(h_new, state->k);
     else if (state->t == _close_)
-        state->k = min(h_new, state->k);
+        state->k = min(h_new, state->h);
     state->h = h_new;
     state->t = _open_;
     openList = InsertList(openList, state);
