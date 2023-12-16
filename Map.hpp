@@ -30,8 +30,10 @@ struct neighbors{
 };
 
 struct MAP{
-    int row;
-    int col;
+    int row;    // X 坐标
+    int col;     // Y 坐标
+    // 加入深度
+    int depth;  // Z 坐标
     State ** map;
     State ** realmap;
     State * execute_action(State * robotLocation);
